@@ -3,12 +3,17 @@ class Compute
     static pair getMinMax(long a[], long n)  
     {
         //Write your code here
-        Arrays.sort(a);
-        long min=Integer.MIN_VALUE;
-        long max=Integer.MAX_VALUE;
-        min=a[0];
-        max = a[a.length-1];
-        pair output=new pair(min,max);
-       return output;
+        long min=a[0];
+        long max=a[0];
+        
+        for(int i=0;i<n;i++){
+            if(a[i]>max){
+                max=a[i];
+            }else if (a[i]<min){
+                min=a[i];
+            }
+        }
+        return new pair(min,max);
         
     }
+}
