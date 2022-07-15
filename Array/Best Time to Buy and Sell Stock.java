@@ -10,3 +10,5 @@ class Solution {
         return maxprofit;
     }
 }
+// Time complexity: O(N)
+// Space complexity: O(1)
